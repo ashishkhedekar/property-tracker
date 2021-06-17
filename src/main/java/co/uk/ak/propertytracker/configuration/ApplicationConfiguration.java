@@ -13,7 +13,7 @@ public class ApplicationConfiguration {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/location").allowedOrigins("http://localhost:4200");
+				registry.addMapping("/location").allowedOrigins("http://localhost:4200", "https://track-properties.herokuapp.com");
 			}
 		};
 	}
