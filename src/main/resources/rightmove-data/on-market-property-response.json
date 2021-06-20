@@ -1,0 +1,263 @@
+{
+  "id": 78897357,
+  "bedrooms": 10,
+  "bathrooms": null,
+  "numberOfImages": 34,
+  "numberOfFloorplans": 3,
+  "numberOfVirtualTours": 0,
+  "summary": "An historic Grade I listed town house. Castle House is a large Grade I listed town house positioned on West Street in the centre of the historic county town of Buckingham. Whilst the main range of the house, which dates from around 1708, is built of red brick with limestone dressings, the...",
+  "displayAddress": "West Street, Buckingham, Buckinghamshire, MK18",
+  "countryCode": "GB",
+  "location": {
+    "latitude": 52.0003,
+    "longitude": -0.9904
+  },
+  "propertySubType": "Detached",
+  "listingUpdate": {
+    "listingUpdateReason": "new",
+    "listingUpdateDate": "2021-03-18T10:31:04Z"
+  },
+  "premiumListing": false,
+  "featuredProperty": false,
+  "price": {
+    "amount": 4000000,
+    "frequency": "not specified",
+    "currencyCode": "GBP",
+    "displayPrices": [
+      {
+        "displayPrice": "£4,000,000",
+        "displayPriceQualifier": "Guide Price"
+      }
+    ]
+  },
+  "customer": {
+    "branchId": 41033,
+    "brandPlusLogoURI": "/company/clogo_rmchoice_16112_0017.png",
+    "contactTelephone": "01865 809175",
+    "branchDisplayName": "Knight Frank, Oxford",
+    "branchName": "Oxford",
+    "brandTradingName": "Knight Frank",
+    "branchLandingPageUrl": "/estate-agents/agent/Knight-Frank/Oxford-41033.html",
+    "development": false,
+    "showReducedProperties": true,
+    "commercial": false,
+    "showOnMap": true,
+    "enhancedListing": false,
+    "developmentContent": null,
+    "buildToRent": false,
+    "brandPlusLogoUrl": "https://media.rightmove.co.uk:443/dir/company/clogo_rmchoice_16112_0017_max_100x50.png"
+  },
+  "distance": null,
+  "transactionType": "buy",
+  "productLabel": {
+    "productLabelText": "",
+    "spotlightLabel": false
+  },
+  "commercial": false,
+  "development": false,
+  "residential": true,
+  "students": false,
+  "auction": false,
+  "feesApply": false,
+  "feesApplyText": null,
+  "displaySize": "",
+  "showOnMap": true,
+  "propertyUrl": "/properties/78897357",
+  "contactUrl": "/property-for-sale/contactBranch.html?propertyId=78897357",
+  "staticMapUrl": null,
+  "channel": "BUY",
+  "firstVisibleDate": "2021-03-18T10:25:51Z",
+  "keywords": [],
+  "keywordMatchType": "no_keyword",
+  "saved": false,
+  "hidden": false,
+  "onlineViewingsAvailable": false,
+  "lozengeModel": {
+    "matchingLozenges": []
+  },
+  "enhancedListing": false,
+  "heading": "",
+  "propertyImages": {
+    "images": [
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_00_0001_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_00_0001.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_01_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_01_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_02_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_02_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_03_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_03_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_04_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_04_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_05_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_05_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_06_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_06_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_07_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_07_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_08_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_08_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_09_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_09_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_10_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_10_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_11_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_11_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_12_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_12_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_13_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_13_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_14_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_14_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_15_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_15_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_16_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_16_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_17_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_17_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_18_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_18_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_19_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_19_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_20_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_20_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_21_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_21_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_22_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_22_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_23_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_23_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_24_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_24_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_25_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_25_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_26_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_26_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_27_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_27_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_28_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_28_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_29_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_29_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_30_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_30_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_31_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_31_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_32_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_32_0000.jpeg",
+        "caption": null
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_33_0000_max_476x317.jpeg",
+        "url": "42k/41033/78897357/41033_OXF062596_IMG_33_0000.jpeg",
+        "caption": null
+      }
+    ],
+    "mainImageSrc": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_00_0001_max_476x317.jpeg",
+    "mainMapImageSrc": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/42k/41033/78897357/41033_OXF062596_IMG_00_0001_max_296x197.jpeg"
+  },
+  "displayStatus": "",
+  "formattedBranchName": " by Knight Frank, Oxford",
+  "addedOrReduced": "Added on 18/03/2021",
+  "isRecent": false,
+  "formattedDistance": "",
+  "hasBrandPlus": true,
+  "propertyTypeFullDescription": "10 bedroom detached house for sale"
+}

@@ -1,0 +1,253 @@
+{
+  "id": 85748170,
+  "bedrooms": 4,
+  "bathrooms": 3,
+  "numberOfImages": 31,
+  "numberOfFloorplans": 1,
+  "numberOfVirtualTours": 0,
+  "summary": "A four double bedroom detached house with a double garage, backing onto a river in a non-estate location and within walking distance of Buckingham town centre. This property has 2,645 sq. ft. of accommodation over three floors and which includes the garage and an outbuilding. On the lower ground ...",
+  "displayAddress": "Pateman Close, Buckingham, Buckinghamshire, MK18",
+  "countryCode": "GB",
+  "location": {
+    "latitude": 52.000517,
+    "longitude": -0.995568
+  },
+  "propertySubType": "Detached",
+  "listingUpdate": {
+    "listingUpdateReason": "new",
+    "listingUpdateDate": "2020-10-13T10:14:02Z"
+  },
+  "premiumListing": true,
+  "featuredProperty": false,
+  "price": {
+    "amount": 790000,
+    "frequency": "not specified",
+    "currencyCode": "GBP",
+    "displayPrices": [
+      {
+        "displayPrice": "£790,000",
+        "displayPriceQualifier": ""
+      }
+    ]
+  },
+  "customer": {
+    "branchId": 53305,
+    "brandPlusLogoURI": "/company/clogo_rmchoice_1519_0001.jpeg",
+    "contactTelephone": "01280 475025",
+    "branchDisplayName": "Michael Graham, Buckingham",
+    "branchName": "Buckingham",
+    "brandTradingName": "Michael Graham",
+    "branchLandingPageUrl": "/estate-agents/agent/Michael-Graham/Buckingham-53305.html",
+    "development": false,
+    "showReducedProperties": true,
+    "commercial": false,
+    "showOnMap": true,
+    "enhancedListing": false,
+    "developmentContent": null,
+    "buildToRent": false,
+    "brandPlusLogoUrl": "https://media.rightmove.co.uk:443/dir/company/clogo_rmchoice_1519_0001_max_100x50.jpeg"
+  },
+  "distance": null,
+  "transactionType": "buy",
+  "productLabel": {
+    "productLabelText": "Riverside views",
+    "spotlightLabel": false
+  },
+  "commercial": false,
+  "development": false,
+  "residential": true,
+  "students": false,
+  "auction": false,
+  "feesApply": false,
+  "feesApplyText": null,
+  "displaySize": "",
+  "showOnMap": true,
+  "propertyUrl": "/properties/85748170",
+  "contactUrl": "/property-for-sale/contactBranch.html?propertyId=85748170",
+  "staticMapUrl": null,
+  "channel": "BUY",
+  "firstVisibleDate": "2020-10-13T10:08:50Z",
+  "keywords": [],
+  "keywordMatchType": "no_keyword",
+  "saved": false,
+  "hidden": false,
+  "onlineViewingsAvailable": false,
+  "lozengeModel": {
+    "matchingLozenges": [
+      {
+        "type": "STATUS",
+        "priority": 2
+      }
+    ]
+  },
+  "enhancedListing": false,
+  "heading": "",
+  "propertyImages": {
+    "images": [
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_01_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_01_0000.jpg",
+        "caption": "Front"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_02_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_02_0000.jpg",
+        "caption": "Rear"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_03_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_03_0000.jpg",
+        "caption": "Kitchen"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_04_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_04_0000.jpg",
+        "caption": "Decking, River"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_05_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_05_0000.jpg",
+        "caption": "Conservatory"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_06_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_06_0000.jpg",
+        "caption": "Sitting Room"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_07_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_07_0000.jpg",
+        "caption": "Family Room"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_08_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_08_0000.jpg",
+        "caption": "Kitchen/Dining Room"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_09_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_09_0000.jpg",
+        "caption": "Kitchen"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_10_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_10_0000.jpg",
+        "caption": "Dining Area"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_11_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_11_0000.jpg",
+        "caption": "River"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_12_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_12_0000.jpg",
+        "caption": "Bedroom"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_13_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_13_0000.jpg",
+        "caption": "En Suite"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_14_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_14_0000.jpg",
+        "caption": "Bathroom"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_15_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_15_0000.jpg",
+        "caption": "Bedroom"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_16_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_16_0000.jpg",
+        "caption": "Bedroom"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_17_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_17_0000.jpg",
+        "caption": "Bedroom"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_18_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_18_0000.jpg",
+        "caption": "En Suite"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_19_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_19_0000.jpg",
+        "caption": "Sitting Room"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_20_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_20_0000.jpg",
+        "caption": "Front"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_21_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_21_0000.jpg",
+        "caption": "Patio"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_22_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_22_0000.jpg",
+        "caption": "Garden"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_23_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_23_0000.jpg",
+        "caption": "Decking, River"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_24_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_24_0000.jpg",
+        "caption": "River"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_25_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_25_0000.jpg",
+        "caption": "Rear"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_26_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_26_0000.jpg",
+        "caption": "Double Garage"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_27_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_27_0000.jpg",
+        "caption": "Rear"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_28_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_28_0000.jpg",
+        "caption": "Front"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_29_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_29_0000.jpg",
+        "caption": "Map"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_30_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_30_0000.jpg",
+        "caption": "Map"
+      },
+      {
+        "srcUrl": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_31_0000_max_476x317.jpg",
+        "url": "54k/53305/85748170/53305_BUC170163_IMG_31_0000.jpg",
+        "caption": "Map"
+      }
+    ],
+    "mainImageSrc": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_01_0000_max_476x317.jpg",
+    "mainMapImageSrc": "https://media.rightmove.co.uk:443/dir/crop/10:9-16:9/54k/53305/85748170/53305_BUC170163_IMG_01_0000_max_296x197.jpg"
+  },
+  "displayStatus": "Sold STC",
+  "formattedBranchName": " by Michael Graham, Buckingham",
+  "addedOrReduced": "Added on 13/10/2020",
+  "isRecent": false,
+  "formattedDistance": "",
+  "hasBrandPlus": true,
+  "propertyTypeFullDescription": "4 bedroom detached house for sale"
+},

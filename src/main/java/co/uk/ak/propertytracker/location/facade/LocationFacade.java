@@ -1,8 +1,6 @@
 package co.uk.ak.propertytracker.location.facade;
 
 import co.uk.ak.propertytracker.location.dto.LocationDto;
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

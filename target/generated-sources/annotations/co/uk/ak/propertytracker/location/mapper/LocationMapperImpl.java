@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-06-16T09:58:54+0100",
+    date = "2021-06-20T19:08:58+0100",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.2 (Oracle Corporation)"
 )
 @Component
@@ -24,6 +24,8 @@ public class LocationMapperImpl implements LocationMapper {
         locationModel.setCode( locationDto.getCode() );
         locationModel.setName( locationDto.getName() );
         locationModel.setDescription( locationDto.getDescription() );
+        locationModel.setMainImage( locationDto.getMainImage() );
+        locationModel.setThumbnail( locationDto.getThumbnail() );
 
         return locationModel;
     }
@@ -39,6 +41,8 @@ public class LocationMapperImpl implements LocationMapper {
         locationDto.setCode( locationModel.getCode() );
         locationDto.setName( locationModel.getName() );
         locationDto.setDescription( locationModel.getDescription() );
+        locationDto.setMainImage( locationModel.getMainImage() );
+        locationDto.setThumbnail( locationModel.getThumbnail() );
 
         return locationDto;
     }

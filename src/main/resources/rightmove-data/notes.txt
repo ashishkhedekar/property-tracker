@@ -1,0 +1,24 @@
+https://www.rightmove.co.uk/api/_search?locationIdentifier=REGION%5E239&minBedrooms=3&maxPrice=425000&numberOfPropertiesPerPage=24&radius=0.0&sortType=2&index=0&includeSSTC=true&viewType=LIST&channel=BUY&areaSizeUnit=sqft&currencyCode=GBP&isFetching=false
+https://www.rightmove.co.uk/api/_search?locationIdentifier=BRANCH%5E130966&channel=BUY&additionalProperties=true
+Buckingham:
+REGION%5E239
+https://www.rightmove.co.uk/api/_search?locationIdentifier=REGION%5E239&channel=BUY
+
+https://www.rightmove.co.uk/api/_search?
+            locationIdentifier=REGION%5E239
+            &minBedrooms=3
+            &maxPrice=425000
+            &numberOfPropertiesPerPage=24
+            &radius=0.0
+            &sortType=2
+            &index=0
+            &includeSSTC=true
+            &viewType=LIST
+            &channel=BUY
+            &areaSizeUnit=sqft
+            &currencyCode=GBP
+            &isFetching=false
+
+
+Important attributes:
+"firstVisibleDate": "2020-10-13T10:08:50Z",
