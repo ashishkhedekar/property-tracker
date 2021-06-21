@@ -66,7 +66,7 @@ public class RightMoveProperty
 {
 
     @JsonProperty("id")
-    private Integer id;
+    private Long id;
     @JsonProperty("bedrooms")
     private Integer bedrooms;
     @JsonProperty("numberOfImages")
@@ -165,12 +165,12 @@ public class RightMoveProperty
     private long daysOnMarket;
 
     @JsonProperty("id")
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
     @JsonProperty("id")
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -47,6 +47,9 @@ public class PropertyModel extends AbstractModel
    @ManyToMany(mappedBy = "properties", fetch = FetchType.EAGER)
    private Set<LocationModel> locations = new HashSet<>();
 
+   @OneToMany(fetch = FetchType.LAZY)
+   private Set<PropertyUpdateModel> propertyUpdates = new HashSet<>();
+
 //   @OneToMany(
 //            mappedBy = "property",
 //            cascade = CascadeType.ALL,
@@ -250,5 +253,13 @@ public class PropertyModel extends AbstractModel
 
    public void setLocations(Set<LocationModel> locations) {
       this.locations = locations;
+   }
+
+   public Set<PropertyUpdateModel> getPropertyUpdates() {
+      return propertyUpdates;
+   }
+
+   public void setPropertyUpdates(Set<PropertyUpdateModel> propertyUpdates) {
+      this.propertyUpdates = propertyUpdates;
    }
 }

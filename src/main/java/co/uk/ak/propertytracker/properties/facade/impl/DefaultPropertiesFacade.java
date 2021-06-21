@@ -42,20 +42,27 @@ public class DefaultPropertiesFacade implements PropertiesFacade {
 			LOG.info("Finding properties for location [{}]", locationDto.getCode());
 			int index = 0;
 			int resultCount = Integer.MAX_VALUE;
-			while (index < resultCount)
-			{
+			while (index < resultCount) {
 				final String rightMoveResponse = webClient.getPropertiesForLocation(locationDto.getCode(), index);
 				final RightMoveResult rightMoveResult;
 				try {
 					rightMoveResult = objectMapper.readValue(rightMoveResponse, RightMoveResult.class);
 					LOG.info("Total number [{}] ", rightMoveResult.getResultCount());
-					if (!CollectionUtils.isEmpty(rightMoveResult.getProperties()))
-					{
-						rightMoveResult.getProperties().forEach(property -> {
-							LOG.info("Saving property [{}] ", property.getId());
-							final LocationModel location = locationService.getLocation(locationDto.getCode());
-							final PropertyModel propertyModel = propertyService.saveProperty(location, property);
-							location.getProperties().add(propertyModel);
+					if (!CollectionUtils.isEmpty(rightMoveResult.getProperties())) {
+						rightMoveResult.getProperties().forEach(rightMoveProperty -> {
+							LOG.info("Looking for rightMoveProperty with id [{}] ", rightMoveProperty.getId());
+							if (propertyService.isNewProperty(rightMoveProperty.getId())) {
+								LOG.info("Saving new rightMoveProperty [{}] ", rightMoveProperty.getId());
+								final LocationModel location = locationService.getLocation(locationDto.getCode());
+								final PropertyModel saveProperty = propertyService.saveProperty(location, rightMoveProperty);
+								location.getProperties().add(saveProperty);
+							}
+							else if (propertyService.hasPropertyChanged(rightMoveProperty))
+							{
+								LOG.info("Updating existing rightMoveProperty [{}] ", rightMoveProperty.getId());
+								final LocationModel location = locationService.getLocation(locationDto.getCode());
+								propertyService.updateProperty(location, rightMoveProperty);
+							}
 						});
 					}
 					index = index + Integer.parseInt(rightMoveResult.getMaxCardsPerPage());

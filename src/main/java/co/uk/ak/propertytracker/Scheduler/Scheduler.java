@@ -16,8 +16,7 @@ public class Scheduler
    private static final Logger LOG = LoggerFactory.getLogger(Scheduler.class);
    private final PropertiesFacade propertiesFacade;
 
-   //Runs every house between 6am till 11pm
-//   @Scheduled(cron = "0 * * * * *")
+   @Scheduled(cron = "0 0 * * * *")
    public void fetchRightMovePropertyUpdates() throws Exception {
      propertiesFacade.getPropertiesForLocation();
    }

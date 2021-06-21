@@ -17,4 +17,7 @@ public class LocationDto {
 	private String mainImage;
 	private String thumbnail;
 
+	private long numberOfProperties;
+	private long numberOfSoldProperties;
+
 }
