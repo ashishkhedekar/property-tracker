@@ -37,7 +37,7 @@ public class RightMoveWebClient
    private String buildSearchUrl(String locationId, int index)
    {
       final String url = rightMoveBaseUrl + rightMoveSearchApiUrl + String.format("?locationIdentifier=%s&channel=BUY&includeSSTC=true&index=%d", locationId, index);
-      LOG.info("The url is [{}] ", url);
+      LOG.debug("The url is [{}] ", url);
       return url;
    }
 }

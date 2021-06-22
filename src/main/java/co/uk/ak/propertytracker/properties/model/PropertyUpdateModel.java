@@ -10,6 +10,7 @@ public class PropertyUpdateModel extends AbstractModel {
 	private String field;
 	private String oldValue;
 	private String newValue;
+	private PropertyUpdateType propertyUpdateType;
 
 	public String getField() {
 		return field;
@@ -33,5 +34,13 @@ public class PropertyUpdateModel extends AbstractModel {
 
 	public void setNewValue(String newValue) {
 		this.newValue = newValue;
+	}
+
+	public PropertyUpdateType getPropertyUpdateType() {
+		return propertyUpdateType;
+	}
+
+	public void setPropertyUpdateType(PropertyUpdateType propertyUpdateType) {
+		this.propertyUpdateType = propertyUpdateType;
 	}
 }

@@ -47,19 +47,19 @@ public class DefaultPropertiesFacade implements PropertiesFacade {
 				final RightMoveResult rightMoveResult;
 				try {
 					rightMoveResult = objectMapper.readValue(rightMoveResponse, RightMoveResult.class);
-					LOG.info("Total number [{}] ", rightMoveResult.getResultCount());
+					LOG.debug("Total number [{}] ", rightMoveResult.getResultCount());
 					if (!CollectionUtils.isEmpty(rightMoveResult.getProperties())) {
 						rightMoveResult.getProperties().forEach(rightMoveProperty -> {
-							LOG.info("Looking for rightMoveProperty with id [{}] ", rightMoveProperty.getId());
+							LOG.debug("Looking for rightMoveProperty with id [{}] ", rightMoveProperty.getId());
 							if (propertyService.isNewProperty(rightMoveProperty.getId())) {
-								LOG.info("Saving new rightMoveProperty [{}] ", rightMoveProperty.getId());
+								LOG.debug("Saving new rightMoveProperty [{}] ", rightMoveProperty.getId());
 								final LocationModel location = locationService.getLocation(locationDto.getCode());
 								final PropertyModel saveProperty = propertyService.saveProperty(location, rightMoveProperty);
 								location.getProperties().add(saveProperty);
 							}
 							else if (propertyService.hasPropertyChanged(rightMoveProperty))
 							{
-								LOG.info("Updating existing rightMoveProperty [{}] ", rightMoveProperty.getId());
+								LOG.debug("Updating existing rightMoveProperty [{}] ", rightMoveProperty.getId());
 								final LocationModel location = locationService.getLocation(locationDto.getCode());
 								propertyService.updateProperty(location, rightMoveProperty);
 							}

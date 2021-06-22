@@ -16,7 +16,7 @@ public class Scheduler
    private static final Logger LOG = LoggerFactory.getLogger(Scheduler.class);
    private final PropertiesFacade propertiesFacade;
 
-   @Scheduled(cron = "0 0 * * * *")
+   @Scheduled(cron = "${rightMove.property.fetch.schedule}")
    public void fetchRightMovePropertyUpdates() throws Exception {
      propertiesFacade.getPropertiesForLocation();
    }

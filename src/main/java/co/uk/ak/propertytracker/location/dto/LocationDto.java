@@ -18,6 +18,10 @@ public class LocationDto {
 	private String thumbnail;
 
 	private long numberOfProperties;
-	private long numberOfSoldProperties;
+	private long numberOfSoldInLast24Hours;
+	private long numberOfSoldInLast30Days;
+	private long numberOfNewInLast24Hours;
+	private long numberOfNewInLast30Days;
+
 
 }
