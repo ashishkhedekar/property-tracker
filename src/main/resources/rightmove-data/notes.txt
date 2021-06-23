@@ -3,12 +3,14 @@ https://www.rightmove.co.uk/api/_search?locationIdentifier=BRANCH%5E130966&chann
 
 Buckingham:
 REGION%5E239
-Buckingham is a market town in north Buckinghamshire, England,
+Buckingham is a market town in north Buckinghamshire, England.
 
 https://www.rightmove.co.uk/api/_search?locationIdentifier=REGION%5E239&channel=BUY
 
 High Barnet:
 REGION%5E12509
+
+Chipping Barnet or High Barnet is a suburban market town in north London, forming part of the London Borough of Barnet, England.
 
 https://www.rightmove.co.uk/api/_search?
             locationIdentifier=REGION%5E239

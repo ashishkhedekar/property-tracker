@@ -1,7 +1,8 @@
 package co.uk.ak.propertytracker.properties.service.impl;
 
+import co.uk.ak.propertytracker.aspect.RecordPropertyUpdate;
 import co.uk.ak.propertytracker.location.model.LocationModel;
-import co.uk.ak.propertytracker.properties.PropertyRepository;
+import co.uk.ak.propertytracker.properties.repository.PropertyRepository;
 import co.uk.ak.propertytracker.properties.mapper.RightMovePropertyToPropertyModelMapper;
 import co.uk.ak.propertytracker.properties.model.PropertyModel;
 import co.uk.ak.propertytracker.properties.model.PropertyUpdateModel;
@@ -28,14 +29,17 @@ public class DefaultPropertyService implements PropertyService {
 	private final RightMovePropertyToPropertyModelMapper mapper;
 	private final PropertyDeltaCheckerService propertyDeltaCheckerService;
 
+	@RecordPropertyUpdate
 	@Override
 	public PropertyModel saveProperty(LocationModel location, RightMoveProperty rightMoveProperty) {
+		LOG.info("Saving property first");
 		final PropertyModel propertyModel = mapper.rightMovePropertyToPropertyModel(rightMoveProperty);
 		//logic to check if property exists
 		propertyModel.getLocations().add(location);
 		return propertyRepository.save(propertyModel);
 	}
 
+	@RecordPropertyUpdate
 	@Override
 	public PropertyModel updateProperty(LocationModel location, RightMoveProperty rightMoveProperty) {
 
@@ -47,6 +51,13 @@ public class DefaultPropertyService implements PropertyService {
 			propertyModel.setOffMarketDate(new Date());
 		}
 		return propertyModel;
+	}
+
+	@RecordPropertyUpdate
+	@Override
+	public PropertyModel logProperty(LocationModel location, RightMoveProperty rightMoveProperty) {
+		LOG.debug("Property update received for [{}]", rightMoveProperty.getId());
+		return null;
 	}
 
 	private boolean propertyGoneOffMarket(Set<PropertyUpdateModel> propertyUpdates) {

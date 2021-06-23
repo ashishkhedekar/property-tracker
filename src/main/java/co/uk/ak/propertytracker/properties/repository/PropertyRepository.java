@@ -1,4 +1,4 @@
-package co.uk.ak.propertytracker.properties;
+package co.uk.ak.propertytracker.properties.repository;
 
 import co.uk.ak.propertytracker.properties.model.PropertyModel;
 import org.springframework.data.repository.CrudRepository;

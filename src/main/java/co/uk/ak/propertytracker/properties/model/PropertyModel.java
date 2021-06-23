@@ -2,7 +2,6 @@ package co.uk.ak.propertytracker.properties.model;
 
 import co.uk.ak.propertytracker.location.model.LocationModel;
 import co.uk.ak.propertytracker.model.AbstractModel;
-import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;

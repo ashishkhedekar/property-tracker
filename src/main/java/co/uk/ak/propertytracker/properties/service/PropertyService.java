@@ -8,6 +8,7 @@ public interface PropertyService {
 
 	PropertyModel saveProperty(LocationModel location, RightMoveProperty rightMoveProperty);
 	PropertyModel updateProperty(LocationModel location, RightMoveProperty rightMoveProperty);
+	PropertyModel logProperty(LocationModel location, RightMoveProperty rightMoveProperty);
 	boolean isNewProperty(Long id);
 	boolean hasPropertyChanged(RightMoveProperty id);
 }

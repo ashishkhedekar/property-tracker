@@ -51,17 +51,20 @@ public class DefaultPropertiesFacade implements PropertiesFacade {
 					if (!CollectionUtils.isEmpty(rightMoveResult.getProperties())) {
 						rightMoveResult.getProperties().forEach(rightMoveProperty -> {
 							LOG.debug("Looking for rightMoveProperty with id [{}] ", rightMoveProperty.getId());
+							final LocationModel location = locationService.getLocation(locationDto.getCode());
 							if (propertyService.isNewProperty(rightMoveProperty.getId())) {
 								LOG.debug("Saving new rightMoveProperty [{}] ", rightMoveProperty.getId());
-								final LocationModel location = locationService.getLocation(locationDto.getCode());
 								final PropertyModel saveProperty = propertyService.saveProperty(location, rightMoveProperty);
 								location.getProperties().add(saveProperty);
 							}
 							else if (propertyService.hasPropertyChanged(rightMoveProperty))
 							{
 								LOG.debug("Updating existing rightMoveProperty [{}] ", rightMoveProperty.getId());
-								final LocationModel location = locationService.getLocation(locationDto.getCode());
 								propertyService.updateProperty(location, rightMoveProperty);
+							}
+							else
+							{
+								propertyService.logProperty(location, rightMoveProperty);
 							}
 						});
 					}
