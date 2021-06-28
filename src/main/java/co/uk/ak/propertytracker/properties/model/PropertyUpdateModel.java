@@ -3,8 +3,10 @@ package co.uk.ak.propertytracker.properties.model;
 import co.uk.ak.propertytracker.model.AbstractModel;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "location_market_stats")
 public class PropertyUpdateModel extends AbstractModel {
 
 	private String field;

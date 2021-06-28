@@ -8,6 +8,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import static co.uk.ak.propertytracker.properties.model.PropertyUpdateType.GONE_OFF_MARKET;
 
@@ -23,7 +24,12 @@ public interface RightMovePropertyToPropertyModelMapper
    {
       if (rightMoveProperty.getDisplayStatus() != null && rightMoveProperty.getDisplayStatus().equals(GONE_OFF_MARKET.getCode()))
       {
-         propertyModel.setOffMarketDate(new Date());
+         final Date today = new Date();
+         propertyModel.setOffMarketDate(today);
+         final Date firstVisibleDate = propertyModel.getFirstVisibleDate();
+         final long daysOnMarket = TimeUnit.DAYS
+                 .convert((today.getTime() - firstVisibleDate.getTime()), TimeUnit.MILLISECONDS);
+         propertyModel.setDaysOnMarket((int) daysOnMarket);
       }
 
    }

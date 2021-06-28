@@ -1,6 +1,7 @@
 package co.uk.ak.propertytracker.properties.service.impl;
 
 import co.uk.ak.propertytracker.aspect.RecordPropertyUpdate;
+import co.uk.ak.propertytracker.location.dto.LocationDto;
 import co.uk.ak.propertytracker.location.model.LocationModel;
 import co.uk.ak.propertytracker.properties.repository.PropertyRepository;
 import co.uk.ak.propertytracker.properties.mapper.RightMovePropertyToPropertyModelMapper;
@@ -15,9 +16,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 @Service
 @AllArgsConstructor
@@ -48,7 +52,12 @@ public class DefaultPropertyService implements PropertyService {
 		propertyModel.getPropertyUpdates().addAll(propertyUpdates);
 		if (propertyGoneOffMarket(propertyUpdates))
 		{
-			propertyModel.setOffMarketDate(new Date());
+			final Date today = new Date();
+			propertyModel.setOffMarketDate(today);
+			final Date firstVisibleDate = propertyModel.getFirstVisibleDate();
+			final long daysOnMarket = TimeUnit.DAYS
+					.convert((today.getTime() - firstVisibleDate.getTime()), TimeUnit.MILLISECONDS);
+			propertyModel.setDaysOnMarket((int) daysOnMarket);
 		}
 		return propertyModel;
 	}
@@ -78,5 +87,28 @@ public class DefaultPropertyService implements PropertyService {
 		return existingPropertyOptional
 				.filter(propertyModel -> propertyDeltaCheckerService.hasChangeUpdates(propertyModel, rightMoveProperty))
 				.isPresent();
+	}
+
+	@Override
+	public long getPropertiesAddedBetween(LocationDto locationDto, LocalDate startLocalDate, LocalDate endLocalDate) {
+		Date startDate = Date.from(startLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		Date endDate = Date.from(endLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		return propertyRepository
+				.countByFirstVisibleDateGreaterThanAndFirstVisibleDateLessThanAndLocations_Id(startDate, endDate, locationDto.getId());
+	}
+
+	@Override
+	public long getPropertiesSoldBetween(LocationDto locationDto, LocalDate startLocalDate, LocalDate endLocalDate) {
+		Date startDate = Date.from(startLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		Date endDate = Date.from(endLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		return propertyRepository
+				.countByOffMarketDateGreaterThanAndFirstVisibleDateLessThanAndLocations_Id(startDate, endDate, locationDto.getId());
+	}
+
+	@Override
+	public double getAverageDaysOnMarket(LocationDto locationDto, LocalDate startLocalDate, LocalDate endLocalDate) {
+		Date startDate = Date.from(startLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		Date endDate = Date.from(endLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		return propertyRepository.avgDaysOnMarket(startDate, endDate);
 	}
 }

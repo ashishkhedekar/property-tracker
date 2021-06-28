@@ -31,6 +31,9 @@ public class LocationModel extends AbstractModel {
 							nullable = false, updatable = false)})
 	private Set<PropertyModel> properties = new HashSet<>();
 
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL )
+	private Set<LocationMarketStatsModel> locationMarketStats;
+
 	public String getCode() {
 		return code;
 	}
@@ -77,5 +80,13 @@ public class LocationModel extends AbstractModel {
 
 	public void setProperties(Set<PropertyModel> properties) {
 		this.properties = properties;
+	}
+
+	public Set<LocationMarketStatsModel> getLocationMarketStats() {
+		return locationMarketStats;
+	}
+
+	public void setLocationMarketStats(Set<LocationMarketStatsModel> locationMarketStats) {
+		this.locationMarketStats = locationMarketStats;
 	}
 }

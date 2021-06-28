@@ -1,5 +1,6 @@
-package co.uk.ak.propertytracker.Scheduler;
+package co.uk.ak.propertytracker.Scheduler.controller;
 
+import co.uk.ak.propertytracker.Scheduler.Scheduler;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
