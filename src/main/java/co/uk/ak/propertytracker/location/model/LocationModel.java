@@ -2,6 +2,7 @@ package co.uk.ak.propertytracker.location.model;
 
 import co.uk.ak.propertytracker.model.AbstractModel;
 import co.uk.ak.propertytracker.properties.model.PropertyModel;
+import co.uk.ak.propertytracker.rightmove.model.RightMovePropertyUpdateModel;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -31,8 +32,11 @@ public class LocationModel extends AbstractModel {
 							nullable = false, updatable = false)})
 	private Set<PropertyModel> properties = new HashSet<>();
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL )
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
 	private Set<LocationMarketStatsModel> locationMarketStats;
+
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private Set<RightMovePropertyUpdateModel> rightMovePropertyUpdates;
 
 	public String getCode() {
 		return code;
@@ -88,5 +92,13 @@ public class LocationModel extends AbstractModel {
 
 	public void setLocationMarketStats(Set<LocationMarketStatsModel> locationMarketStats) {
 		this.locationMarketStats = locationMarketStats;
+	}
+
+	public Set<RightMovePropertyUpdateModel> getRightMovePropertyUpdates() {
+		return rightMovePropertyUpdates;
+	}
+
+	public void setRightMovePropertyUpdates(Set<RightMovePropertyUpdateModel> rightMovePropertyUpdates) {
+		this.rightMovePropertyUpdates = rightMovePropertyUpdates;
 	}
 }

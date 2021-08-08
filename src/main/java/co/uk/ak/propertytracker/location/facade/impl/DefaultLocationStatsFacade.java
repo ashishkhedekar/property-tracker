@@ -6,7 +6,7 @@ import co.uk.ak.propertytracker.location.facade.LocationStatsFacade;
 import co.uk.ak.propertytracker.location.model.LocationMarketStatsModel;
 import co.uk.ak.propertytracker.location.model.LocationModel;
 import co.uk.ak.propertytracker.location.repository.LocationRepository;
-import co.uk.ak.propertytracker.location.repository.LocationStatusRepository;
+import co.uk.ak.propertytracker.location.repository.LocationMarketStatsRepository;
 import co.uk.ak.propertytracker.properties.service.PropertyService;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -26,7 +26,7 @@ public class DefaultLocationStatsFacade implements LocationStatsFacade {
 	private static final Logger LOG = LoggerFactory.getLogger(DefaultLocationStatsFacade.class);
 	private final PropertyService propertyService;
 	private final LocationFacade locationFacade;
-	private final LocationStatusRepository locationStatusRepository;
+	private final LocationMarketStatsRepository locationMarketStatsRepository;
 	private final LocationRepository locationRepository;
 
 	@Transactional
@@ -51,7 +51,8 @@ public class DefaultLocationStatsFacade implements LocationStatsFacade {
 
 			final LocationModel locationModel = locationRepository.findByCode(locationDto.getCode());
 			final String monthAndYear = String.format("%s-%s", month, year);
-			final LocationMarketStatsModel statsForTheMonth = locationStatusRepository.findAllByMonthYearAndLocation(monthAndYear, locationModel);
+			final LocationMarketStatsModel statsForTheMonth = locationMarketStatsRepository
+					.findAllByMonthYearAndLocation(monthAndYear, locationModel);
 
 			if (statsForTheMonth != null)
 			{
@@ -71,7 +72,7 @@ public class DefaultLocationStatsFacade implements LocationStatsFacade {
 				locationMarketStatsModel.setAverageAgeOnMarket(averageDaysOnMarket);
 				locationMarketStatsModel.setLocation(locationModel);
 				locationModel.getLocationMarketStats().add(locationMarketStatsModel);
-				locationStatusRepository.save(locationMarketStatsModel);
+				locationMarketStatsRepository.save(locationMarketStatsModel);
 			}
 		});
 	}

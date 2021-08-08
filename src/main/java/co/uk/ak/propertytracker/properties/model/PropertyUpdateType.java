@@ -3,7 +3,7 @@ package co.uk.ak.propertytracker.properties.model;
 
 public enum PropertyUpdateType {
 
-	GONE_OFF_MARKET("Sold STC"),BACK_ON_MARKET("");
+	GONE_OFF_MARKET("Sold STC"),BACK_ON_MARKET(""), GOING_OFF_MARKET("Under offer");
 
 	private final String code;
 

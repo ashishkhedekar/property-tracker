@@ -1,5 +1,6 @@
 package co.uk.ak.propertytracker.rightmove.service.impl;
 
+import co.uk.ak.propertytracker.location.model.LocationModel;
 import co.uk.ak.propertytracker.rightmove.dto.RightMoveProperty;
 import co.uk.ak.propertytracker.rightmove.model.RightMovePropertyUpdateModel;
 import co.uk.ak.propertytracker.rightmove.repository.RightMovePropertyUpdateRepository;
@@ -20,8 +21,6 @@ public class DefaultRightMovePropertyUpdatesService implements RightMoveProperty
 	private final RightMovePropertyUpdateRepository rightMovePropertyUpdateRepository;
 	private final ObjectMapper objectMapper;
 
-
-
 	@Override
 	public boolean propertyUpdateExists(RightMoveProperty rightMoveProperty) {
 
@@ -31,11 +30,13 @@ public class DefaultRightMovePropertyUpdatesService implements RightMoveProperty
 
 	@Transactional
 	@Override
-	public void recordPropertyUpdate(RightMoveProperty rightMoveProperty) throws JsonProcessingException {
+	public void recordPropertyUpdate(LocationModel locationModel, RightMoveProperty rightMoveProperty) throws JsonProcessingException {
 
 		RightMovePropertyUpdateModel updateModel = new RightMovePropertyUpdateModel();
+		updateModel.setLocationCode(locationModel.getCode());
 		updateModel.setJson(objectMapper.writeValueAsString(rightMoveProperty));
 		updateModel.setPropertyId(rightMoveProperty.getId());
+		locationModel.getRightMovePropertyUpdates().add(updateModel);
 		rightMovePropertyUpdateRepository.save(updateModel);
 
 	}

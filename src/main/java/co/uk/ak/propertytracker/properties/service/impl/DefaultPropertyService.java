@@ -18,9 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.util.Date;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -35,11 +33,17 @@ public class DefaultPropertyService implements PropertyService {
 
 	@RecordPropertyUpdate
 	@Override
-	public PropertyModel saveProperty(LocationModel location, RightMoveProperty rightMoveProperty) {
+	public PropertyModel saveProperty(LocationModel location, RightMoveProperty rightMoveProperty, boolean isLoad) {
 		LOG.info("Saving property first");
 		final PropertyModel propertyModel = mapper.rightMovePropertyToPropertyModel(rightMoveProperty);
 		//logic to check if property exists
+		if (propertyModel.getLocations() == null)
+		{
+			Set<LocationModel> locations = new HashSet<>();
+			propertyModel.setLocations(locations);
+		}
 		propertyModel.getLocations().add(location);
+
 		return propertyRepository.save(propertyModel);
 	}
 
@@ -47,19 +51,31 @@ public class DefaultPropertyService implements PropertyService {
 	@Override
 	public PropertyModel updateProperty(LocationModel location, RightMoveProperty rightMoveProperty) {
 
-		final PropertyModel propertyModel = mapper.rightMovePropertyToPropertyModel(rightMoveProperty);
-		final Set<PropertyUpdateModel> propertyUpdates = propertyDeltaCheckerService.getPropertyUpdates(propertyModel, rightMoveProperty);
-		propertyModel.getPropertyUpdates().addAll(propertyUpdates);
-		if (propertyGoneOffMarket(propertyUpdates))
+		final Optional<PropertyModel> propertyModelOptional = propertyRepository.findByPropertyId(rightMoveProperty.getId());
+		if (propertyModelOptional.isPresent())
 		{
-			final Date today = new Date();
-			propertyModel.setOffMarketDate(today);
-			final Date firstVisibleDate = propertyModel.getFirstVisibleDate();
-			final long daysOnMarket = TimeUnit.DAYS
-					.convert((today.getTime() - firstVisibleDate.getTime()), TimeUnit.MILLISECONDS);
-			propertyModel.setDaysOnMarket((int) daysOnMarket);
+			final PropertyModel propertyModel = propertyModelOptional.get();
+			final Set<PropertyUpdateModel> propertyUpdates = propertyDeltaCheckerService.getPropertyUpdates(propertyModel, rightMoveProperty);
+			LOG.info("The number of property updates [{}]", propertyUpdates.size());
+			propertyModel.getPropertyUpdates().addAll(propertyUpdates);
+			if (propertyGoneOffMarket(propertyUpdates))
+			{
+				final Date today = new Date();
+				propertyModel.setOffMarketDate(today);
+				final Date firstVisibleDate = propertyModel.getFirstVisibleDate();
+				final long daysOnMarket = TimeUnit.DAYS
+						.convert((today.getTime() - firstVisibleDate.getTime()), TimeUnit.MILLISECONDS);
+				propertyModel.setDaysOnMarket((int) daysOnMarket);
+				propertyModel.setDisplayStatus(PropertyUpdateType.GONE_OFF_MARKET.getCode());
+			} else if (propertyBackOnMarket(propertyUpdates))
+			{
+				propertyModel.setDisplayStatus(getLatestDisplayStatus(propertyUpdates));
+				propertyModel.setOffMarketDate(null);
+				propertyModel.setDaysOnMarket(0);
+			}
+			return propertyModel;
 		}
-		return propertyModel;
+		return null;
 	}
 
 	@RecordPropertyUpdate
@@ -70,10 +86,23 @@ public class DefaultPropertyService implements PropertyService {
 	}
 
 	private boolean propertyGoneOffMarket(Set<PropertyUpdateModel> propertyUpdates) {
-
 		return propertyUpdates.stream().anyMatch(
 				propertyUpdateModel -> propertyUpdateModel.getPropertyUpdateType()
 						.equals(PropertyUpdateType.GONE_OFF_MARKET));
+	}
+
+	private boolean propertyBackOnMarket(Set<PropertyUpdateModel> propertyUpdates) {
+		return propertyUpdates.stream().anyMatch(propertyUpdateModel -> Arrays
+				.asList(PropertyUpdateType.BACK_ON_MARKET, PropertyUpdateType.GOING_OFF_MARKET)
+				.contains(propertyUpdateModel.getPropertyUpdateType()));
+	}
+
+	private String getLatestDisplayStatus(Set<PropertyUpdateModel> propertyUpdates)
+	{
+		final Optional<PropertyUpdateModel> displayStatus = propertyUpdates.stream()
+				.filter(propertyUpdateModel -> propertyUpdateModel.getField().equals("DisplayStatus")).findFirst();
+		return displayStatus.isPresent() ? displayStatus.get().getNewValue() : "";
+
 	}
 
 	@Override
@@ -84,6 +113,7 @@ public class DefaultPropertyService implements PropertyService {
 	@Override
 	public boolean hasPropertyChanged(RightMoveProperty rightMoveProperty) {
 		final Optional<PropertyModel> existingPropertyOptional = propertyRepository.findByPropertyId(rightMoveProperty.getId());
+		LOG.info("existingPropertyOptional is [{}] ", existingPropertyOptional.isPresent() ? "present" : "not present" );
 		return existingPropertyOptional
 				.filter(propertyModel -> propertyDeltaCheckerService.hasChangeUpdates(propertyModel, rightMoveProperty))
 				.isPresent();

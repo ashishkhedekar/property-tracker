@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "location_market_stats")
+@Table(name = "property_updates")
 public class PropertyUpdateModel extends AbstractModel {
 
 	private String field;

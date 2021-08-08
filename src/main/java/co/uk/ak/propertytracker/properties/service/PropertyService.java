@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 public interface PropertyService {
 
-	PropertyModel saveProperty(LocationModel location, RightMoveProperty rightMoveProperty);
+	PropertyModel saveProperty(LocationModel location, RightMoveProperty rightMoveProperty, boolean isLoad);
 	PropertyModel updateProperty(LocationModel location, RightMoveProperty rightMoveProperty);
 	PropertyModel logProperty(LocationModel location, RightMoveProperty rightMoveProperty);
 	boolean isNewProperty(Long id);

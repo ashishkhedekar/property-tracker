@@ -8,4 +8,6 @@ import java.util.List;
 public interface RightMovePropertyUpdateRepository extends CrudRepository<RightMovePropertyUpdateModel, Long>  {
 
 	List<RightMovePropertyUpdateModel> findAllByPropertyId(Long id);
+
+	List<RightMovePropertyUpdateModel> findAllByOrderByCreationTimeDesc();
 }

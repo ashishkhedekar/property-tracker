@@ -1,5 +1,6 @@
 package co.uk.ak.propertytracker.location.facade.impl;
 
+import co.uk.ak.propertytracker.aspect.RecordLocationUpdates;
 import co.uk.ak.propertytracker.location.dto.LocationDto;
 import co.uk.ak.propertytracker.location.facade.LocationFacade;
 import co.uk.ak.propertytracker.location.mapper.LocationMapper;
@@ -32,6 +33,7 @@ public class DefaultLocationFacade implements LocationFacade {
 	}
 
 	@Override
+	@RecordLocationUpdates
 	public LocationDto createLocation(LocationDto locationDto) {
 
 		final LocationModel locationModel = locationMapper.locationDtoToLocationModel(locationDto);

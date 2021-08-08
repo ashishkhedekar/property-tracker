@@ -44,10 +44,10 @@ public class PropertyModel extends AbstractModel
    private Date lastPropertyUpdateReceived;
    private Boolean registered;
 
-   @ManyToMany(mappedBy = "properties", fetch = FetchType.EAGER)
+   @ManyToMany(mappedBy = "properties", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
    private Set<LocationModel> locations = new HashSet<>();
 
-   @OneToMany(fetch = FetchType.LAZY)
+   @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
    private Set<PropertyUpdateModel> propertyUpdates = new HashSet<>();
 
 //   @OneToMany(

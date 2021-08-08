@@ -14,7 +14,7 @@ public class LocationMarketStatsModel extends AbstractModel {
 	private long numberOfNewProperties;
 	private long numberOfSoldProperties;
 	private double averageAgeOnMarket;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
 	private LocationModel location;
 
 
