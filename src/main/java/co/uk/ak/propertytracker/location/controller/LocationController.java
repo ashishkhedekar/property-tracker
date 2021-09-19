@@ -16,12 +16,13 @@ public class LocationController {
 
 	private final LocationFacade locationFacade;
 
+	//todo: price range
 	@GetMapping
-	public ResponseEntity<?> getAllLocations()
+	public ResponseEntity<?> getAllLocations(@RequestParam(required = false, defaultValue = "0") final int minBed, @RequestParam(required = false, defaultValue = "100") final int maxBed)
 	{
 		final LocationsDto locationsDto = new LocationsDto();
-		locationsDto.setLocations(locationFacade.getAllLocations());
-		return ResponseEntity.status(HttpStatus.CREATED).body(locationsDto);
+		locationsDto.setLocations(locationFacade.getAllLocations(minBed, maxBed));
+		return ResponseEntity.status(HttpStatus.OK).body(locationsDto);
 	}
 
 	@GetMapping(value = "/code/{code}")

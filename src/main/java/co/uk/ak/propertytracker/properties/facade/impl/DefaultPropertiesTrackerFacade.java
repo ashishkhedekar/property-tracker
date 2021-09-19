@@ -2,12 +2,8 @@ package co.uk.ak.propertytracker.properties.facade.impl;
 
 import co.uk.ak.propertytracker.location.dto.LocationDto;
 import co.uk.ak.propertytracker.location.facade.LocationFacade;
-import co.uk.ak.propertytracker.location.model.LocationModel;
-import co.uk.ak.propertytracker.location.service.LocationService;
 import co.uk.ak.propertytracker.properties.facade.PropertiesFacade;
 import co.uk.ak.propertytracker.properties.facade.PropertiesTrackerFacade;
-import co.uk.ak.propertytracker.properties.model.PropertyModel;
-import co.uk.ak.propertytracker.properties.service.PropertyService;
 import co.uk.ak.propertytracker.rightmove.client.RightMoveWebClient;
 import co.uk.ak.propertytracker.rightmove.dto.RightMoveProperty;
 import co.uk.ak.propertytracker.rightmove.dto.RightMoveResult;
@@ -34,7 +30,7 @@ public class DefaultPropertiesTrackerFacade implements PropertiesTrackerFacade {
 
 	@Override
 	public List<RightMoveProperty> getPropertiesForLocation() {
-		final List<LocationDto> allLocations = locationFacade.getAllLocations();
+		final List<LocationDto> allLocations = locationFacade.getAllLocations(0, 100);
 		allLocations.forEach(locationDto -> {
 			LOG.info("Finding properties for location [{}]", locationDto.getCode());
 			int index = 0;

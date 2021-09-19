@@ -6,6 +6,7 @@ import co.uk.ak.propertytracker.location.service.LocationService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -18,6 +19,13 @@ public class DefaultLocationService implements LocationService {
 
 	@Override
 	public List<LocationModel> getAllLocations() {
+		return StreamSupport
+				.stream(locationRepository.findAll().spliterator(), false)
+				.collect(Collectors.toList());
+	}
+
+	@Override
+	public List<LocationModel> getLocations(int minBed, int maxbed) {
 		return StreamSupport
 				.stream(locationRepository.findAll().spliterator(), false)
 				.collect(Collectors.toList());

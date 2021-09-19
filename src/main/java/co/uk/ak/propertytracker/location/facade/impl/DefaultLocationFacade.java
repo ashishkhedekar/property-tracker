@@ -20,8 +20,13 @@ public class DefaultLocationFacade implements LocationFacade {
 	private final LocationMapper locationMapper;
 
 	@Override
-	public List<LocationDto> getAllLocations() {
-		return locationService.getAllLocations()
+	public List<LocationDto> getAllLocations(int minBed, int maxBed) {
+//		return locationService.getAllLocations()
+//				.stream()
+//				.map(locationMapper::locationModelToLocationDto)
+//				.collect(Collectors.toList());
+
+		return locationService.getLocations(minBed, maxBed)
 				.stream()
 				.map(locationMapper::locationModelToLocationDto)
 				.collect(Collectors.toList());

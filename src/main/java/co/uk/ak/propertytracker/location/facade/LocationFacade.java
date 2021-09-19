@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface LocationFacade {
 
-	List<LocationDto> getAllLocations();
+	List<LocationDto> getAllLocations(int minBed, int maxBed);
 
 	LocationDto getLocationByCode(String code);
 

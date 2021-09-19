@@ -41,7 +41,7 @@ public class DefaultLocationStatsFacade implements LocationStatsFacade {
 		final LocalDate endOfMonth = YearMonth.of(year, month.getValue()).atEndOfMonth();
 		LOG.info("The StartDate [{}] and endDate [{}]", startDate, endOfMonth);
 
-		final List<LocationDto> allLocations = locationFacade.getAllLocations();
+		final List<LocationDto> allLocations = locationFacade.getAllLocations(0, 100);
 		allLocations.forEach(locationDto -> {
 
 			final long newProperties = propertyService.getPropertiesAddedBetween(locationDto, startDate, endOfMonth);
