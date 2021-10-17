@@ -15,6 +15,7 @@ import java.util.Set;
 import static co.uk.ak.propertytracker.properties.model.PropertyUpdateType.BACK_ON_MARKET;
 import static co.uk.ak.propertytracker.properties.model.PropertyUpdateType.GOING_OFF_MARKET;
 import static co.uk.ak.propertytracker.properties.model.PropertyUpdateType.GONE_OFF_MARKET;
+import static co.uk.ak.propertytracker.properties.model.PropertyUpdateType.UNKNOWN;
 
 @Service
 public class DefaultPropertyDeltaCheckerService implements PropertyDeltaCheckerService {
@@ -49,6 +50,11 @@ public class DefaultPropertyDeltaCheckerService implements PropertyDeltaCheckerS
 			else if (propertyUpdateModel.getNewValue().equals(GOING_OFF_MARKET.getCode()))
 			{
 				propertyUpdateModel.setPropertyUpdateType(GOING_OFF_MARKET);
+			}
+			else
+			{
+				LOG.error("Unrecognised property update [{}]", propertyUpdateModel.getNewValue());
+				propertyUpdateModel.setPropertyUpdateType(UNKNOWN);
 			}
 			propertyUpdateModels.add(propertyUpdateModel);
 		}

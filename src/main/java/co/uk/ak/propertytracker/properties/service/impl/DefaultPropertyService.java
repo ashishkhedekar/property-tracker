@@ -58,8 +58,7 @@ public class DefaultPropertyService implements PropertyService {
 			final Set<PropertyUpdateModel> propertyUpdates = propertyDeltaCheckerService.getPropertyUpdates(propertyModel, rightMoveProperty);
 			LOG.info("The number of property updates [{}]", propertyUpdates.size());
 			propertyModel.getPropertyUpdates().addAll(propertyUpdates);
-			if (propertyGoneOffMarket(propertyUpdates))
-			{
+			if (propertyGoneOffMarket(propertyUpdates)) {
 				final Date today = new Date();
 				propertyModel.setOffMarketDate(today);
 				final Date firstVisibleDate = propertyModel.getFirstVisibleDate();
@@ -67,8 +66,7 @@ public class DefaultPropertyService implements PropertyService {
 						.convert((today.getTime() - firstVisibleDate.getTime()), TimeUnit.MILLISECONDS);
 				propertyModel.setDaysOnMarket((int) daysOnMarket);
 				propertyModel.setDisplayStatus(PropertyUpdateType.GONE_OFF_MARKET.getCode());
-			} else if (propertyBackOnMarket(propertyUpdates))
-			{
+			} else if (propertyBackOnMarket(propertyUpdates)) {
 				propertyModel.setDisplayStatus(getLatestDisplayStatus(propertyUpdates));
 				propertyModel.setOffMarketDate(null);
 				propertyModel.setDaysOnMarket(0);
