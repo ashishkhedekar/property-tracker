@@ -48,6 +48,7 @@ public class PropertyModel extends AbstractModel
    private Set<LocationModel> locations = new HashSet<>();
 
    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+   @JoinColumn(name = "property_id")
    private Set<PropertyUpdateModel> propertyUpdates = new HashSet<>();
 
 //   @OneToMany(

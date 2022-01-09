@@ -137,6 +137,7 @@ public class DefaultPropertyService implements PropertyService {
 	public double getAverageDaysOnMarket(LocationDto locationDto, LocalDate startLocalDate, LocalDate endLocalDate) {
 		Date startDate = Date.from(startLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
 		Date endDate = Date.from(endLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
-		return propertyRepository.avgDaysOnMarket(startDate, endDate);
+		final Double avgDaysOnMarket = propertyRepository.avgDaysOnMarket(startDate, endDate);
+		return avgDaysOnMarket != null ? avgDaysOnMarket : 0;
 	}
 }
