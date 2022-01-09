@@ -36,6 +36,7 @@ public class LocationModel extends AbstractModel {
 	private Set<LocationMarketStatsModel> locationMarketStats;
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "location_id")
 	private Set<RightMovePropertyUpdateModel> rightMovePropertyUpdates;
 
 	public String getCode() {
