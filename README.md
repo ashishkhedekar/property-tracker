@@ -1,10 +1,8 @@
-# property-tracker
+# Property-Tracker
 
-This is a property tracker app
+Running application locally
 
-Running this application locally
-
-1. Clone the repository 
+1. Clone the git repository 
    ```
    git clone https://github.com/ashishkhedekar/property-tracker.git
    ```
@@ -23,3 +21,11 @@ Running this application locally
    ```
    ./mvnw spring-boot:run 
    ```
+   
+## Functionality:
+1. To fetch property updates for all the existing locations
+   ```
+   GET http://localhost:8080/schedule
+   ```
+
+2. Scheduler `generateLocationStats` runs every minute and generates stats, saved in table `location_market_stats`
