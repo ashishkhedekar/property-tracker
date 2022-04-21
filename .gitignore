@@ -29,3 +29,7 @@ hs_err_pid*
 !**/src/test/**/target/
 
 target/
+
+#Docker files
+/docker/data/db/**/*
+/log/**/*
