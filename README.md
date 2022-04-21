@@ -25,7 +25,15 @@ Running application locally
    ./mvnw spring-boot:run -Dspring-boot.run.jvmArguments="-Dspring.profiles.active=dev"
    ```
    
-
+## Packaging
+1. Create docker image
+   ```
+    docker build -t property-tracker-spring-image .
+   ```
+2. Run Application with database using docker-compose
+   ```
+   docker-compose up -d
+   ```
    
 ## Functionality:
 1. To fetch property updates for all the existing locations
