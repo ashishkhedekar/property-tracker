@@ -19,8 +19,13 @@ Running application locally
    ```
 4. Start the server
    ```
-   ./mvnw spring-boot:run 
+   ./mvnw spring-boot:run
+
+   # Using profile dev   
+   ./mvnw spring-boot:run -Dspring-boot.run.jvmArguments="-Dspring.profiles.active=dev"
    ```
+   
+
    
 ## Functionality:
 1. To fetch property updates for all the existing locations
